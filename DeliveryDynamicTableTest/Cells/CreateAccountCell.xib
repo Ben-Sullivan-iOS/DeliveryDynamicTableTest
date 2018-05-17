@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="createAccountCell" rowHeight="162" id="Fby-CO-M0q" customClass="CreateAccountCell" customModule="DeliveryDynamicTableTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="551" height="162"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fby-CO-M0q" id="HzI-tc-dlD">
+                <rect key="frame" x="0.0" y="0.0" width="551" height="161.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Order your favourte food faste r securely store your payment dertails or use one touch order witheach order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9V-ys-X4k">
+                        <rect key="frame" x="20" y="11" width="511" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="DomLightGreyText"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6v-re-fQW">
+                        <rect key="frame" x="0.0" y="48" width="551" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-fl-xzq">
+                                <rect key="frame" x="16" y="15" width="535" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="DomLightGreyText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="LightTextFieldGrey"/>
+                        <constraints>
+                            <constraint firstItem="oKM-fl-xzq" firstAttribute="centerY" secondItem="V6v-re-fQW" secondAttribute="centerY" id="Ipj-Z3-wxd"/>
+                            <constraint firstAttribute="height" constant="50" id="MON-Yq-hiP"/>
+                            <constraint firstItem="oKM-fl-xzq" firstAttribute="leading" secondItem="V6v-re-fQW" secondAttribute="leading" constant="16" id="Pbe-xQ-szK"/>
+                            <constraint firstAttribute="trailing" secondItem="oKM-fl-xzq" secondAttribute="trailing" id="r5O-qZ-1tm"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Order your favourte food faste r securely store your payment dertails or use one touch order witheach order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMS-0C-qzl">
+                        <rect key="frame" x="16" y="106" width="519" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="DomLightGreyText"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiJ-Aq-cNz">
+                        <rect key="frame" x="16" y="141.5" width="535" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="8FD-CW-xJa"/>
+                        </constraints>
+                        <state key="normal" title="Find out more">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" name="DomBackground"/>
+                <constraints>
+                    <constraint firstItem="V6v-re-fQW" firstAttribute="top" secondItem="K9V-ys-X4k" secondAttribute="bottom" constant="8" id="AjZ-Y0-1Gq"/>
+                    <constraint firstAttribute="trailing" secondItem="V6v-re-fQW" secondAttribute="trailing" id="Ixf-ko-n1B"/>
+                    <constraint firstItem="IMS-0C-qzl" firstAttribute="top" secondItem="V6v-re-fQW" secondAttribute="bottom" constant="8" id="Kbk-sG-vth"/>
+                    <constraint firstItem="V6v-re-fQW" firstAttribute="leading" secondItem="HzI-tc-dlD" secondAttribute="leading" id="Q30-qd-Xe1"/>
+                    <constraint firstItem="aiJ-Aq-cNz" firstAttribute="leading" secondItem="HzI-tc-dlD" secondAttribute="leading" constant="16" id="Quc-JH-8j5"/>
+                    <constraint firstItem="K9V-ys-X4k" firstAttribute="top" secondItem="HzI-tc-dlD" secondAttribute="topMargin" id="SWT-r6-xmb"/>
+                    <constraint firstItem="K9V-ys-X4k" firstAttribute="trailing" secondItem="HzI-tc-dlD" secondAttribute="trailingMargin" id="VpI-CT-yu4"/>
+                    <constraint firstAttribute="trailing" secondItem="IMS-0C-qzl" secondAttribute="trailing" constant="16" id="Wrz-ym-p7X"/>
+                    <constraint firstItem="IMS-0C-qzl" firstAttribute="leading" secondItem="HzI-tc-dlD" secondAttribute="leading" constant="16" id="gxs-b8-WDO"/>
+                    <constraint firstAttribute="trailing" secondItem="aiJ-Aq-cNz" secondAttribute="trailing" id="he7-VR-6mK"/>
+                    <constraint firstAttribute="bottom" secondItem="aiJ-Aq-cNz" secondAttribute="bottom" id="mOC-Mg-Abu"/>
+                    <constraint firstItem="aiJ-Aq-cNz" firstAttribute="top" secondItem="IMS-0C-qzl" secondAttribute="bottom" constant="12" id="oXI-Ja-NTM"/>
+                    <constraint firstItem="K9V-ys-X4k" firstAttribute="leading" secondItem="HzI-tc-dlD" secondAttribute="leadingMargin" id="oiS-ue-0RY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-267.5" y="-100"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DomBackground">
+            <color red="0.18000000715255737" green="0.18000000715255737" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DomLightGreyText">
+            <color red="0.66699999570000001" green="0.66699999570000001" blue="0.66699999570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightTextFieldGrey">
+            <color red="0.2590000033" green="0.2590000033" blue="0.2590000033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

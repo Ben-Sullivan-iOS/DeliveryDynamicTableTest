@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeOrderCell" rowHeight="127" id="hAg-Sq-9MA">
+            <rect key="frame" x="0.0" y="0.0" width="476" height="127"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAg-Sq-9MA" id="u0l-YR-hKk">
+                <rect key="frame" x="0.0" y="0.0" width="476" height="126.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£17.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-ag-73P">
+                        <rect key="frame" x="402.5" y="11" width="53.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-mT-I17">
+                        <rect key="frame" x="20" y="38.5" width="436" height="50"/>
+                        <color key="backgroundColor" red="0.14995911532116585" green="0.63083692528735624" blue="0.1765252388089481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="w81-Cc-9RL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" title="PLACE ORDER AND PAY">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By placing this order you are agreeing to our terms and conditions which" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKf-4f-2bf">
+                        <rect key="frame" x="20" y="98.5" width="436" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="DomLightGreyText"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="DomBackground"/>
+                <constraints>
+                    <constraint firstItem="cbB-ag-73P" firstAttribute="top" secondItem="u0l-YR-hKk" secondAttribute="topMargin" id="PY9-Q7-lIM"/>
+                    <constraint firstAttribute="trailing" secondItem="gKf-4f-2bf" secondAttribute="trailing" constant="20" id="XL2-ne-1Wq"/>
+                    <constraint firstItem="gKf-4f-2bf" firstAttribute="leading" secondItem="u0l-YR-hKk" secondAttribute="leading" constant="20" id="YEM-1y-8FZ"/>
+                    <constraint firstItem="0NB-mT-I17" firstAttribute="leading" secondItem="u0l-YR-hKk" secondAttribute="leadingMargin" id="kJ1-2K-IHb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0NB-mT-I17" secondAttribute="trailing" id="lqa-Vd-uAf"/>
+                    <constraint firstAttribute="bottom" secondItem="gKf-4f-2bf" secondAttribute="bottom" id="mRM-hb-xHZ"/>
+                    <constraint firstItem="gKf-4f-2bf" firstAttribute="top" secondItem="0NB-mT-I17" secondAttribute="bottom" constant="10" id="vxG-1z-LJc"/>
+                    <constraint firstItem="cbB-ag-73P" firstAttribute="trailing" secondItem="u0l-YR-hKk" secondAttribute="trailingMargin" id="wAK-79-yhu"/>
+                    <constraint firstItem="0NB-mT-I17" firstAttribute="centerY" secondItem="u0l-YR-hKk" secondAttribute="centerY" id="zna-gY-nLS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-109" y="-34.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DomBackground">
+            <color red="0.18000000715255737" green="0.18000000715255737" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DomLightGreyText">
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

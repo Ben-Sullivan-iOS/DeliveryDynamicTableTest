@@ -8,20 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		48E468D320AC20E9003EB2DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468D220AC20E9003EB2DB /* AppDelegate.swift */; };
-		48E468D520AC20E9003EB2DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468D420AC20E9003EB2DB /* ViewController.swift */; };
+		48E468D520AC20E9003EB2DB /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468D420AC20E9003EB2DB /* CheckoutVC.swift */; };
 		48E468D820AC20E9003EB2DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E468D620AC20E9003EB2DB /* Main.storyboard */; };
 		48E468DA20AC20E9003EB2DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E468D920AC20E9003EB2DB /* Assets.xcassets */; };
 		48E468DD20AC20E9003EB2DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E468DB20AC20E9003EB2DB /* LaunchScreen.storyboard */; };
+		48E468E520AC211E003EB2DB /* DeliveryTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468E420AC211E003EB2DB /* DeliveryTableView.xib */; };
+		48E468E720AC2A84003EB2DB /* DeliverToCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468E620AC2A84003EB2DB /* DeliverToCell.xib */; };
+		48E468E920AC2E14003EB2DB /* DeliverToCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468E820AC2E14003EB2DB /* DeliverToCell.swift */; };
+		48E468EB20AC73F6003EB2DB /* MyDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468EA20AC73F6003EB2DB /* MyDetailsCell.xib */; };
+		48E468ED20AC74E4003EB2DB /* MyDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468EC20AC74E4003EB2DB /* MyDetailsCell.swift */; };
+		48E468EF20AC7741003EB2DB /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468EE20AC7741003EB2DB /* PaymentMethodCell.xib */; };
+		48E468F120AC77FD003EB2DB /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468F020AC77FD003EB2DB /* PaymentMethodCell.swift */; };
+		48E468F420AC79A1003EB2DB /* CreateAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468F320AC79A1003EB2DB /* CreateAccountCell.xib */; };
+		48E468F620AC79D2003EB2DB /* DeliverToHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468F520AC79D2003EB2DB /* DeliverToHeader.xib */; };
+		48E468F820AC7DAA003EB2DB /* CreateAccountHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468F720AC7DAA003EB2DB /* CreateAccountHeader.xib */; };
+		48E468FA20AC8473003EB2DB /* CreateAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468F920AC8473003EB2DB /* CreateAccountCell.swift */; };
+		48E468FC20AC8700003EB2DB /* PaymentMethodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468FB20AC8700003EB2DB /* PaymentMethodVC.swift */; };
+		48E468FE20AC8753003EB2DB /* PaymentMethodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468FD20AC8753003EB2DB /* PaymentMethodVC.xib */; };
+		48E4690020AD61D1003EB2DB /* PlaceOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E468FF20AD61D1003EB2DB /* PlaceOrderCell.xib */; };
+		48E4690220AD6A38003EB2DB /* PaymentMethodLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4690120AD6A38003EB2DB /* PaymentMethodLabelCell.swift */; };
+		48E4690420AD6A43003EB2DB /* PaymentMethodLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E4690320AD6A43003EB2DB /* PaymentMethodLabelCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48E468CF20AC20E9003EB2DB /* DeliveryDynamicTableTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryDynamicTableTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E468D220AC20E9003EB2DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48E468D420AC20E9003EB2DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48E468D420AC20E9003EB2DB /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		48E468D720AC20E9003EB2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48E468D920AC20E9003EB2DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48E468DC20AC20E9003EB2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48E468DE20AC20E9003EB2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48E468E420AC211E003EB2DB /* DeliveryTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryTableView.xib; sourceTree = "<group>"; };
+		48E468E620AC2A84003EB2DB /* DeliverToCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliverToCell.xib; sourceTree = "<group>"; };
+		48E468E820AC2E14003EB2DB /* DeliverToCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverToCell.swift; sourceTree = "<group>"; };
+		48E468EA20AC73F6003EB2DB /* MyDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDetailsCell.xib; sourceTree = "<group>"; };
+		48E468EC20AC74E4003EB2DB /* MyDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsCell.swift; sourceTree = "<group>"; };
+		48E468EE20AC7741003EB2DB /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
+		48E468F020AC77FD003EB2DB /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
+		48E468F320AC79A1003EB2DB /* CreateAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountCell.xib; sourceTree = "<group>"; };
+		48E468F520AC79D2003EB2DB /* DeliverToHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliverToHeader.xib; sourceTree = "<group>"; };
+		48E468F720AC7DAA003EB2DB /* CreateAccountHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountHeader.xib; sourceTree = "<group>"; };
+		48E468F920AC8473003EB2DB /* CreateAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCell.swift; sourceTree = "<group>"; };
+		48E468FB20AC8700003EB2DB /* PaymentMethodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodVC.swift; sourceTree = "<group>"; };
+		48E468FD20AC8753003EB2DB /* PaymentMethodVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodVC.xib; sourceTree = "<group>"; };
+		48E468FF20AD61D1003EB2DB /* PlaceOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceOrderCell.xib; sourceTree = "<group>"; };
+		48E4690120AD6A38003EB2DB /* PaymentMethodLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodLabelCell.swift; sourceTree = "<group>"; };
+		48E4690320AD6A43003EB2DB /* PaymentMethodLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodLabelCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +86,38 @@
 		48E468D120AC20E9003EB2DB /* DeliveryDynamicTableTest */ = {
 			isa = PBXGroup;
 			children = (
-				48E468D220AC20E9003EB2DB /* AppDelegate.swift */,
-				48E468D420AC20E9003EB2DB /* ViewController.swift */,
+				48E468FB20AC8700003EB2DB /* PaymentMethodVC.swift */,
+				48E468FD20AC8753003EB2DB /* PaymentMethodVC.xib */,
+				48E468D420AC20E9003EB2DB /* CheckoutVC.swift */,
+				48E468E420AC211E003EB2DB /* DeliveryTableView.xib */,
+				48E468F220AC785C003EB2DB /* Cells */,
 				48E468D620AC20E9003EB2DB /* Main.storyboard */,
 				48E468D920AC20E9003EB2DB /* Assets.xcassets */,
+				48E468D220AC20E9003EB2DB /* AppDelegate.swift */,
 				48E468DB20AC20E9003EB2DB /* LaunchScreen.storyboard */,
 				48E468DE20AC20E9003EB2DB /* Info.plist */,
 			);
 			path = DeliveryDynamicTableTest;
+			sourceTree = "<group>";
+		};
+		48E468F220AC785C003EB2DB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				48E468FF20AD61D1003EB2DB /* PlaceOrderCell.xib */,
+				48E468E820AC2E14003EB2DB /* DeliverToCell.swift */,
+				48E468E620AC2A84003EB2DB /* DeliverToCell.xib */,
+				48E468F520AC79D2003EB2DB /* DeliverToHeader.xib */,
+				48E468F020AC77FD003EB2DB /* PaymentMethodCell.swift */,
+				48E4690120AD6A38003EB2DB /* PaymentMethodLabelCell.swift */,
+				48E4690320AD6A43003EB2DB /* PaymentMethodLabelCell.xib */,
+				48E468EE20AC7741003EB2DB /* PaymentMethodCell.xib */,
+				48E468F720AC7DAA003EB2DB /* CreateAccountHeader.xib */,
+				48E468F320AC79A1003EB2DB /* CreateAccountCell.xib */,
+				48E468F920AC8473003EB2DB /* CreateAccountCell.swift */,
+				48E468EC20AC74E4003EB2DB /* MyDetailsCell.swift */,
+				48E468EA20AC73F6003EB2DB /* MyDetailsCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +179,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E4690420AD6A43003EB2DB /* PaymentMethodLabelCell.xib in Resources */,
+				48E4690020AD61D1003EB2DB /* PlaceOrderCell.xib in Resources */,
+				48E468F820AC7DAA003EB2DB /* CreateAccountHeader.xib in Resources */,
 				48E468DD20AC20E9003EB2DB /* LaunchScreen.storyboard in Resources */,
+				48E468E520AC211E003EB2DB /* DeliveryTableView.xib in Resources */,
+				48E468EF20AC7741003EB2DB /* PaymentMethodCell.xib in Resources */,
+				48E468EB20AC73F6003EB2DB /* MyDetailsCell.xib in Resources */,
 				48E468DA20AC20E9003EB2DB /* Assets.xcassets in Resources */,
 				48E468D820AC20E9003EB2DB /* Main.storyboard in Resources */,
+				48E468E720AC2A84003EB2DB /* DeliverToCell.xib in Resources */,
+				48E468F420AC79A1003EB2DB /* CreateAccountCell.xib in Resources */,
+				48E468F620AC79D2003EB2DB /* DeliverToHeader.xib in Resources */,
+				48E468FE20AC8753003EB2DB /* PaymentMethodVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +202,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48E468D520AC20E9003EB2DB /* ViewController.swift in Sources */,
+				48E468D520AC20E9003EB2DB /* CheckoutVC.swift in Sources */,
+				48E468F120AC77FD003EB2DB /* PaymentMethodCell.swift in Sources */,
 				48E468D320AC20E9003EB2DB /* AppDelegate.swift in Sources */,
+				48E468ED20AC74E4003EB2DB /* MyDetailsCell.swift in Sources */,
+				48E468FC20AC8700003EB2DB /* PaymentMethodVC.swift in Sources */,
+				48E468E920AC2E14003EB2DB /* DeliverToCell.swift in Sources */,
+				48E4690220AD6A38003EB2DB /* PaymentMethodLabelCell.swift in Sources */,
+				48E468FA20AC8473003EB2DB /* CreateAccountCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,20 +8,19 @@
 
 import UIKit
 
-protocol DeliveryTableViewControllerDelegate: class {
-  var _tableView: UITableView? { get }
-  func reloadData()
-}
-
-class CheckoutVC: UIViewController {
-  
-  @IBOutlet weak var tableView: UITableView!
+struct DeliveryViewModel {
   
   var sections: [SectionType] = [.deliverTo, .myDetails, .createAccountHeader, .paymentMethod, .placeOrder]
   var sectionHeaderTitles = [HeaderTitle]()
-  
   var createAccountState = CreateAccountState.closed
-
+  
+  mutating func populateSectionHeaderTitles() {
+    sectionHeaderTitles.removeAll()
+    for i in sections {
+      sectionHeaderTitles.append(i.headerTitle())
+    }
+  }
+  
   enum CreateAccountState: Int {
     case closed, open
     
@@ -72,7 +71,7 @@ class CheckoutVC: UIViewController {
         
       case .createAccountHeader:
         return tableView.dequeueReusableCell(withIdentifier: "createAccountCell", for: indexPath) as! CreateAccountCell
-       
+        
       case .placeOrder:
         return tableView.dequeueReusableCell(withIdentifier: "placeOrderCell", for: indexPath)
         
@@ -105,7 +104,7 @@ class CheckoutVC: UIViewController {
       }
     }
     
-    func headerView(withViewWidth width: CGFloat, delegate: CheckoutVC) -> UIView {
+    func headerView(withViewWidth width: CGFloat, delegate: CheckoutVCType) -> UIView {
       switch self {
       case .deliverTo:
         let deliverToNib = UINib(nibName: "DeliverToHeader", bundle: .main)
@@ -115,10 +114,10 @@ class CheckoutVC: UIViewController {
       case .createAccountHeader:
         let deliverToNib = UINib(nibName: "CreateAccountHeader", bundle: .main)
         let headerView = deliverToNib.instantiate(withOwner: delegate, options: nil).first as! UIView
-        let gest = UITapGestureRecognizer(target: delegate, action: #selector(insertCreateAccountRow))
+        let gest = UITapGestureRecognizer(target: delegate, action: #selector(delegate.insertCreateAccountRow))
         headerView.addGestureRecognizer(gest)
         headerView.backgroundColor = UIColor(named: "DomBackground")
-
+        
         return headerView
         
       default: break
@@ -142,11 +141,27 @@ class CheckoutVC: UIViewController {
       return headerView
     }
   }
+}
+
+protocol DeliveryTableViewControllerDelegate: class {
+  var _tableView: UITableView? { get }
+  func reloadData()
+}
+
+@objc protocol CheckoutVCType {
+  @objc func insertCreateAccountRow()
+}
+
+class CheckoutVC: UIViewController, CheckoutVCType {
+  
+  @IBOutlet weak var tableView: UITableView!
+  
+  var deliveryViewModel = DeliveryViewModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    populateSectionHeaderTitles()
+    deliveryViewModel.populateSectionHeaderTitles()
     
     tableView.backgroundColor = UIColor(white: 46.0 / 255.0, alpha: 1.0)
     view.backgroundColor = UIColor(white: 46.0 / 255.0, alpha: 1.0)
@@ -183,27 +198,20 @@ class CheckoutVC: UIViewController {
     tableView.reloadData()
   }
   
-  private func populateSectionHeaderTitles() {
-    sectionHeaderTitles.removeAll()
-    for i in sections {
-      sectionHeaderTitles.append(i.headerTitle())
-    }
-  }
-  
 }
 
 extension CheckoutVC: UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
-    return sections.count
+    return deliveryViewModel.sections.count
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return sections[section].numberOfRows(createAccountState: createAccountState)
+    return deliveryViewModel.sections[section].numberOfRows(createAccountState: deliveryViewModel.createAccountState)
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return sections[indexPath.section].cell(delegate: self, indexPath: indexPath)
+    return deliveryViewModel.sections[indexPath.section].cell(delegate: self, indexPath: indexPath)
   }
   
 }
@@ -211,11 +219,11 @@ extension CheckoutVC: UITableViewDataSource {
 extension CheckoutVC: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return sectionHeaderTitles[section].headerHeight()
+    return deliveryViewModel.sectionHeaderTitles[section].headerHeight()
   }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    return sections[section].headerView(withViewWidth: view.frame.width, delegate: self)
+    return deliveryViewModel.sections[section].headerView(withViewWidth: view.frame.width, delegate: self)
   }
 
 }
@@ -228,15 +236,15 @@ extension CheckoutVC: DeliveryTableViewControllerDelegate {
   
   @objc func insertCreateAccountRow() {
     
-    guard let section = sections.index(of: .createAccountHeader) else { return }
+    guard let section = deliveryViewModel.sections.index(of: .createAccountHeader) else { return }
     
-    if createAccountState == .open {
-      createAccountState = .closed
+    if deliveryViewModel.createAccountState == .open {
+      deliveryViewModel.createAccountState = .closed
       
       let ip = IndexPath(row: 0, section: section)
       tableView.deleteRows(at: [ip], with: .automatic)
-    } else if createAccountState == .closed {
-      createAccountState = .open
+    } else if deliveryViewModel.createAccountState == .closed {
+      deliveryViewModel.createAccountState = .open
       
       let ip = IndexPath(row: 0, section: section)
       tableView.insertRows(at: [ip], with: .automatic)

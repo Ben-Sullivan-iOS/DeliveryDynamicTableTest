@@ -16,7 +16,7 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var sections: [SectionType] = [.deliverTo, .myDetails, .createAccount, .paymentMethod, .placeOrder]
+  var sections: [SectionType] = [.deliverTo, .myDetails, .createAccountHeader, .paymentMethod, .placeOrder]
   var sectionHeaderTitles = [String]()
   
   var createAccountState = CreateAccountState.closed
@@ -27,7 +27,7 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
   
   enum SectionType {
     
-    case deliverTo, collectFrom, myDetails, paymentMethod, createAccount, pennies, placeOrder
+    case deliverTo, collectFrom, myDetails, paymentMethod, createAccount, createAccountHeader, pennies, placeOrder
     
     func getCell(delegate: CheckoutVC, indexPath: IndexPath) -> UITableViewCell {
       switch self {
@@ -64,11 +64,13 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
       case .paymentMethod:
         return "Payment method"
       case .createAccount:
-        return "Create an account? (optional)"
+        return ""
       case .pennies:
         return ""
       case .placeOrder:
         return ""
+      case .createAccountHeader:
+        return "Create an account? (optional)"
       }
     }
     
@@ -78,7 +80,7 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
         let deliverToNib = UINib(nibName: "DeliverToHeader", bundle: .main)
         let headerView = deliverToNib.instantiate(withOwner: delegate, options: nil).first as! UIView
         return headerView
-      case .createAccount:
+      case .createAccountHeader:
         let deliverToNib = UINib(nibName: "CreateAccountHeader", bundle: .main)
         let headerView = deliverToNib.instantiate(withOwner: delegate, options: nil).first as! UIView
         let gest = UITapGestureRecognizer(target: delegate, action: #selector(createAccountTapped))
@@ -103,9 +105,8 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    for i in sections {
-      sectionHeaderTitles.append(i.getHeaderTitle())
-    }
+
+    populateSectionHeaderTitles()
     
     tableView.backgroundColor = UIColor(white: 46.0 / 255.0, alpha: 1.0)
     view.backgroundColor = UIColor(white: 46.0 / 255.0, alpha: 1.0)
@@ -151,7 +152,7 @@ extension CheckoutVC: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if section == 3 {
+    if sections[section] == .createAccountHeader {
       switch createAccountState {
       case .open:
         return 1
@@ -178,16 +179,26 @@ extension CheckoutVC: UITableViewDelegate {
     return 50
   }
   
+  func populateSectionHeaderTitles() {
+    sectionHeaderTitles.removeAll()
+    for i in sections {
+      sectionHeaderTitles.append(i.getHeaderTitle())
+    }
+  }
+  
   @objc func createAccountTapped() {
 
+    let section = sections.index(of: .createAccountHeader)!
+    
     if createAccountState == .open {
       createAccountState = .closed
-      
-      let ip = IndexPath(row: 0, section: sections.index(of: .createAccount)!)
+
+      let ip = IndexPath(row: 0, section: section)
       tableView.deleteRows(at: [ip], with: .automatic)
     } else {
       createAccountState = .open
-      let ip = IndexPath(row: 0, section: sections.index(of: .createAccount)!)
+
+      let ip = IndexPath(row: 0, section: section)
       tableView.insertRows(at: [ip], with: .automatic)
     }
   }

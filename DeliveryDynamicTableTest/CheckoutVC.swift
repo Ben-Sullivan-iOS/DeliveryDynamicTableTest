@@ -16,6 +16,15 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
   
   @IBOutlet weak var tableView: UITableView!
   
+  var sections: [SectionType] = [.deliverTo, .myDetails, .createAccount, .paymentMethod, .placeOrder]
+  var sectionHeaderTitles = [String]()
+  
+  var createAccountState = CreateAccountState.closed
+
+  enum CreateAccountState {
+    case open, closed
+  }
+  
   enum SectionType {
     
     case deliverTo, collectFrom, myDetails, paymentMethod, createAccount, pennies, placeOrder
@@ -35,7 +44,7 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
         
       case .createAccount:
         return delegate.tableView.dequeueReusableCell(withIdentifier: "createAccountCell", for: indexPath) as! CreateAccountCell
-        
+       
       case .placeOrder:
         return delegate.tableView.dequeueReusableCell(withIdentifier: "placeOrderCell", for: indexPath)
         
@@ -47,7 +56,7 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
     func getHeaderTitle() -> String {
       switch self {
       case .deliverTo:
-        return ""
+        return " "
       case .collectFrom:
         return ""
       case .myDetails:
@@ -91,14 +100,6 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
     }
   }
   
-  var sections: [SectionType] = [.createAccount, .placeOrder, .myDetails, .paymentMethod, .placeOrder]
-  
-  enum cells: Int {
-    case deliverToCell = 0
-  }
-  
-  var sectionHeaderTitles = [String]()
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -128,12 +129,6 @@ class CheckoutVC: UIViewController, DeliveryTableViewControllerDelegate {
     tableView.estimatedRowHeight = 50
     
   }
-  
-  enum CreateAccountState {
-    case open, closed
-  }
-  
-  var createAccountState = CreateAccountState.closed
   
   func reloadData() {
     tableView.reloadData()
@@ -184,7 +179,7 @@ extension CheckoutVC: UITableViewDelegate {
   }
   
   @objc func createAccountTapped() {
-    
+
     if createAccountState == .open {
       createAccountState = .closed
       

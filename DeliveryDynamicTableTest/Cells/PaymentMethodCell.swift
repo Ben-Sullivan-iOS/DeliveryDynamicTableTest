@@ -19,8 +19,8 @@ class PaymentMethodCell: UITableViewCell {
     
     tableView.dataSource = self
     tableView.delegate = self
-    let nib = UINib(nibName: "PaymentMethodLabelCell", bundle: .main)
-    tableView.register(nib, forCellReuseIdentifier: "paymentMethodLabelCell")
+    let nib = UINib(nibName: PaymentMethodLabelCell.ID, bundle: .main)
+    tableView.register(nib, forCellReuseIdentifier: PaymentMethodLabelCell.ID)
   }
 }
 
@@ -30,7 +30,7 @@ extension PaymentMethodCell: UITableViewDataSource {
     return cellTitles.count
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "paymentMethodLabelCell", for: indexPath) as! PaymentMethodLabelCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: PaymentMethodLabelCell.ID, for: indexPath) as! PaymentMethodLabelCell
     cell.selectionStyle = .none
     cell.paymentLabel.text = cellTitles[indexPath.row]
     return cell

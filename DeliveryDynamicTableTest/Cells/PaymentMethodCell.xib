@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="paymentMethodCell" rowHeight="390" id="Tyy-u5-Ii1" customClass="PaymentMethodCell" customModule="DeliveryDynamicTableTest" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentMethodCell" rowHeight="390" id="Tyy-u5-Ii1" customClass="PaymentMethodCell" customModule="DeliveryDynamicTableTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="498" height="175"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tyy-u5-Ii1" id="SMB-IT-R3c">

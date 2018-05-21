@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48735C6920B2D24A00266DA0 /* DeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48735C6820B2D24A00266DA0 /* DeliveryViewModel.swift */; };
 		48E468D320AC20E9003EB2DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468D220AC20E9003EB2DB /* AppDelegate.swift */; };
 		48E468D520AC20E9003EB2DB /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E468D420AC20E9003EB2DB /* CheckoutVC.swift */; };
 		48E468D820AC20E9003EB2DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E468D620AC20E9003EB2DB /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48735C6820B2D24A00266DA0 /* DeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewModel.swift; sourceTree = "<group>"; };
 		48E468CF20AC20E9003EB2DB /* DeliveryDynamicTableTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryDynamicTableTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E468D220AC20E9003EB2DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E468D420AC20E9003EB2DB /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				48E468FB20AC8700003EB2DB /* PaymentMethodVC.swift */,
 				48E468FD20AC8753003EB2DB /* PaymentMethodVC.xib */,
 				48E468D420AC20E9003EB2DB /* CheckoutVC.swift */,
+				48735C6820B2D24A00266DA0 /* DeliveryViewModel.swift */,
 				48E468E420AC211E003EB2DB /* DeliveryTableView.xib */,
 				48E468F220AC785C003EB2DB /* Cells */,
 				48E468D620AC20E9003EB2DB /* Main.storyboard */,
@@ -206,6 +209,7 @@
 				48E468F120AC77FD003EB2DB /* PaymentMethodCell.swift in Sources */,
 				48E468D320AC20E9003EB2DB /* AppDelegate.swift in Sources */,
 				48E468ED20AC74E4003EB2DB /* MyDetailsCell.swift in Sources */,
+				48735C6920B2D24A00266DA0 /* DeliveryViewModel.swift in Sources */,
 				48E468FC20AC8700003EB2DB /* PaymentMethodVC.swift in Sources */,
 				48E468E920AC2E14003EB2DB /* DeliverToCell.swift in Sources */,
 				48E4690220AD6A38003EB2DB /* PaymentMethodLabelCell.swift in Sources */,

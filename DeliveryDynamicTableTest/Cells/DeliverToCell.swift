@@ -24,8 +24,6 @@ class DeliverToCell: UITableViewCell {
     addDriverButton.isHidden = true
     notesText.isHidden = false
     instructionsView.isHidden = false
-    setNeedsLayout()
-    layoutIfNeeded()
     
     delegate?.reloadData()
   }
